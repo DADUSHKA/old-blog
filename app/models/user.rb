@@ -1,7 +1,12 @@
 class User < ActiveRecord::Base
+  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation, :confirmation_token, :auth_token
   has_secure_password
 
   validates :email, :email => true, :uniqueness => true, :allow_blank => true
+  validates :first_name, :presence => true
+  validates :last_name, :presence => true
+  validates :password, :presence => true
+  validates :password_confirmation, :presence => true
 
   state_machine :state, :initial => :new do
     state :new
@@ -19,7 +24,6 @@ class User < ActiveRecord::Base
     event :activate do
       transition all => :active
     end
-
   end
 
   scope :active, with_states(:active)
@@ -40,5 +44,4 @@ class User < ActiveRecord::Base
   def to_s
     full_name
   end
-
 end
