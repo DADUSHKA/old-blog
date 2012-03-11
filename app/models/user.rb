@@ -5,8 +5,8 @@ class User < ActiveRecord::Base
   validates :email, :email => true, :uniqueness => true, :allow_blank => true
   validates :first_name, :presence => true
   validates :last_name, :presence => true
-  validates :password, :presence => true
-  validates :password_confirmation, :presence => true
+  #validates :password, :presence => true
+  #validates :password_confirmation, :presence => true
 
   state_machine :state, :initial => :new do
     state :new
