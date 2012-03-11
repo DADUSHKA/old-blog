@@ -1,0 +1,7 @@
+.row
+  .span5
+    = simple_form_for :user, :url => user_password_instruction_path, :html => {:class => 'form-horizontal'} do |f|
+      %legend Восстановление пароля
+      = f.input :email
+      .form-actions
+        = f.button :submit, 'Отправить', :class => 'btn-primary'

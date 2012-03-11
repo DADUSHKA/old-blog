@@ -1,4 +1,12 @@
 Blog::Application.routes.draw do
+  root :to => 'users#new'
+
+  resource :user, :only => [:new, :create] do
+    resource :session, :only => [:new, :create, :destroy]
+    resource :confirmation, :only => [:create]
+    resource :password_instruction, :only => [:new, :create] 
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +56,7 @@ Blog::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+
 
   # See how all your routes lay out with "rake routes"
 

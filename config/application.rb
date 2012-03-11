@@ -9,6 +9,9 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+require "configus"
+require File.expand_path('../../lib/configus', __FILE__)
+
 module Blog
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -17,6 +20,7 @@ module Blog
 
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
+    config.autoload_paths += %W(#{config.root}/lib)
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
@@ -55,5 +59,7 @@ module Blog
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.action_mailer.default_url_options = { :host => configus.host }
   end
 end
