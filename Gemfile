@@ -11,6 +11,7 @@ gem "validates"
 gem 'state_machine'
 gem 'configus'
 gem 'simple_form'
+gem 'inherited_resources'
 
 # Gems used only for assets and not required
 # in production environments by default.

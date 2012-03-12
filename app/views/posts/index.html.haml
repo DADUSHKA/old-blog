@@ -1,0 +1,13 @@
+- @posts.each do |post|
+  %article
+    %header.page-header
+      %h1
+        = link_to post.title, post
+      %i.icon-time
+      = l post.created_at, :format => :short
+    = post.body
+    %footer
+
+
+
+        

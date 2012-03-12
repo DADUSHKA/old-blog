@@ -1,11 +1,13 @@
 Blog::Application.routes.draw do
-  root :to => 'users#new'
+  root :to => 'posts#index'
 
   resource :user, :only => [:new, :create] do
     resource :session, :only => [:new, :create, :destroy]
     resource :confirmation, :only => [:create]
     resource :password_instruction, :only => [:new, :create] 
   end
+
+  resources :posts, :only => [:index, :show]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
