@@ -1,0 +1,4 @@
+- @posts.each do |post|
+  = link_to post.title, post
+  = post.created_at
+= link_to 'New', new_admin_post_path
