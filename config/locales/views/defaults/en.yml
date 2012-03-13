@@ -1,0 +1,5 @@
+en:
+  views:
+    defaults:  
+      edit: Edit
+      delete: Delete
