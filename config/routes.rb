@@ -1,10 +1,18 @@
 Blog::Application.routes.draw do
   root :to => 'posts#index'
 
+  namespace :admin do
+    root :to => 'posts#index'
+    resources :posts
+    resources :users
+  end
+
   resource :user, :only => [:new, :create] do
-    resource :session, :only => [:new, :create, :destroy]
-    resource :confirmation, :only => [:create]
-    resource :password_instruction, :only => [:new, :create] 
+    scope :module => :user do
+      resource :session, :only => [:new, :create, :destroy]
+      resource :confirmation, :only => [:create]
+      resource :password_instruction, :only => [:new, :create] 
+    end
   end
 
   resources :posts, :only => [:index, :show]

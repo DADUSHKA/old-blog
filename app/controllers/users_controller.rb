@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    #params[:user][:admin] = false #TODO use types
     @user = User.new(params[:user])
     @user.generate_confirmation_token
     if @user.save

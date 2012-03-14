@@ -1,0 +1,17 @@
+= link_to 'New', new_admin_post_path
+%table.table
+  %thead
+    %tr
+      %th Id
+      %th Title
+      %th Created at
+      %th Actions
+  %tbody
+    - @posts.each do |post|
+      %tr
+        %th= post.id
+        %th= link_to post.title, post
+        %th= l post.created_at, :format => :short
+        %th
+          = link_to t('views.defaults.edit'), edit_admin_post_path(post), :class => "btn btn-primary"
+          = link_to t('views.defaults.delete'), admin_post_path(post),  :method => :delete, :confirm => "Are you sure?", :class => "btn btn-danger"
