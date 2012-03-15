@@ -15,6 +15,10 @@ module AuthHelper
     def signed_in?
       session[:user_id]
     end
+    
+    def admin_signed_in?
+      signed_in? && current_user.admin
+    end
 
     def authenticate_user!
       unless signed_in?
