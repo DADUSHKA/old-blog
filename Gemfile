@@ -14,6 +14,7 @@ gem 'simple_form'
 gem 'inherited_resources'
 
 gem 'redcarpet'
+gem 'twitter-text'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -141,6 +141,8 @@ GEM
       actionpack (>= 3.1)
       less-rails (~> 2.1.6)
       railties (>= 3.1)
+    twitter-text (1.4.17)
+      activesupport
     tzinfo (0.3.32)
     uglifier (1.2.3)
       execjs (>= 0.3.0)
@@ -169,5 +171,6 @@ DEPENDENCIES
   tconsole
   turn
   twitter-bootstrap-rails
+  twitter-text
   uglifier (>= 1.0.3)
   validates
