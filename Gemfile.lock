@@ -108,6 +108,7 @@ GEM
     rake (0.9.2.2)
     rdoc (3.12)
       json (~> 1.4)
+    redcarpet (2.1.0)
     responders (0.6.5)
     sass (3.1.15)
     sass-rails (3.2.4)
@@ -140,6 +141,8 @@ GEM
       actionpack (>= 3.1)
       less-rails (~> 2.1.6)
       railties (>= 3.1)
+    twitter-text (1.4.17)
+      activesupport
     tzinfo (0.3.32)
     uglifier (1.2.3)
       execjs (>= 0.3.0)
@@ -160,6 +163,7 @@ DEPENDENCIES
   jquery-rails
   minitest
   rails (= 3.2.2)
+  redcarpet
   sass-rails (~> 3.2.3)
   simple_form
   sqlite3
@@ -167,5 +171,6 @@ DEPENDENCIES
   tconsole
   turn
   twitter-bootstrap-rails
+  twitter-text
   uglifier (>= 1.0.3)
   validates
