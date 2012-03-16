@@ -12,6 +12,7 @@ gem 'state_machine'
 gem 'configus'
 gem 'simple_form'
 gem 'inherited_resources'
+gem 'acts-as-taggable-on'
 
 gem 'redcarpet'
 gem 'twitter-text'
