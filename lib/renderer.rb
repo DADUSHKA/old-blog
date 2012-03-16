@@ -6,7 +6,7 @@ class Renderer < Redcarpet::Render::HTML
   end
   
   def postprocess(text)
-    oprions = { 
+    options = { 
       :hashtag_url_base => '/tags/', 
       :suppress_no_follow => true }
     auto_link_hashtags text, options
