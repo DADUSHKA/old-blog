@@ -4,11 +4,12 @@ class Renderer < Redcarpet::Render::HTML
     level += 1
     "<h#{level}>#{text}</h#{level}>"
   end
-  
-  def postprocess(text)
+ 
+  def paragraph(text)
     options = { 
       :hashtag_url_base => '/tags/', 
       :suppress_no_follow => true }
-    auto_link_hashtags text, options
+    result = auto_link_hashtags text, options
+    "<p>#{result}</p>\n"
   end
 end

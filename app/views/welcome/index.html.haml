@@ -1,0 +1,16 @@
+%header
+  .hero-unit
+    %h1 DarkLeaf -  Просто о темном
+    %p
+      В моем блоге освещаются следующие темы: пошло облако тегов
+  .row
+    .span6
+      %h2
+        Новые записи:
+      %ul
+        - @last_posts.each do |post|
+          %li= post.title
+    .span6
+      %h2
+        Новые проекты:
+      /вывестин

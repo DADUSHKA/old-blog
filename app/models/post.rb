@@ -6,6 +6,7 @@ class Post < ActiveRecord::Base
 
   private
   def parse_hash_tags
-    self.tag_list.add extract_hashtags body
+    tag_list.clear
+    tag_list = extract_hashtags(body)
   end
 end

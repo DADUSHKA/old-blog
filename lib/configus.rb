@@ -5,6 +5,10 @@ Configus.build Rails.env do
     end
 
     host "darkleaf.ru"
+
+    welcome do
+      item_limit 10
+    end
   end
 
   env :development, :parent => :production
