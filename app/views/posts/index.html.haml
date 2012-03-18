@@ -3,12 +3,15 @@
     %header.page-header
       %h1
         = link_to post.title, post
-      %i.icon-time
-      = l post.created_at, :format => :short
+      %p
+        %i.icon-time
+        = l post.created_at, :format => :short
+      - unless post.tag_list.empty?
+        %p
+          %i.icon-tags 
+          = post.tag_list.join ' '
     = markdown post.body
     %footer
-      Tags: 
-      = post.tag_list.join ' '
-
+      
 
         

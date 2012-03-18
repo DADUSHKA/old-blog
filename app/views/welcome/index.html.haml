@@ -4,13 +4,16 @@
     %p
       В моем блоге освещаются следующие темы: пошло облако тегов
   .row
-    .span6
+    .span4
       %h2
         Новые записи:
       %ul
         - @last_posts.each do |post|
           %li= post.title
-    .span6
+      = link_to t('posts.all'), posts_path, :class => "btn btn-primary"
+    .span4
+      %h2 Новые комментарии:
+    .span4
       %h2
         Новые проекты:
-      /вывестин
+      /вывести
