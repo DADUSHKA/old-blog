@@ -7,7 +7,7 @@ class Renderer < Redcarpet::Render::HTML
  
   def paragraph(text)
     options = { 
-      :hashtag_url_base => '/tags/', 
+      :hashtag_url_base => '/post/tags/', 
       :suppress_no_follow => true }
     result = auto_link_hashtags text, options
     "<p>#{result}</p>\n"
