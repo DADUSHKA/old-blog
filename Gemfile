@@ -13,6 +13,8 @@ gem 'configus'
 gem 'simple_form'
 gem 'inherited_resources'
 gem 'acts-as-taggable-on'
+gem 'friendly_id'
+gem 'russian'
 
 gem 'redcarpet'
 gem 'twitter-text'

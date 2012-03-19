@@ -53,6 +53,7 @@ GEM
     factory_girl_rails (1.7.0)
       factory_girl (~> 2.6.0)
       railties (>= 3.0.0)
+    friendly_id (4.0.3)
     haml (3.1.4)
     haml-rails (0.3.4)
       actionpack (~> 3.0)
@@ -112,6 +113,8 @@ GEM
       json (~> 1.4)
     redcarpet (2.1.0)
     responders (0.6.5)
+    russian (0.6.0)
+      i18n (>= 0.5.0)
     sass (3.1.15)
     sass-rails (3.2.4)
       railties (~> 3.2.0)
@@ -161,12 +164,14 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   configus
   factory_girl_rails
+  friendly_id
   haml-rails
   inherited_resources
   jquery-rails
   minitest
   rails (= 3.2.2)
   redcarpet
+  russian
   sass-rails (~> 3.2.3)
   simple_form
   sqlite3
