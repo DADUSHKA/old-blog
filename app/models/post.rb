@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
   include Twitter::Extractor
+  extend FriendlyId
+  friendly_id :title, use: :slugged
 
   acts_as_taggable
   before_save :parse_hash_tags
