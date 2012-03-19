@@ -5,11 +5,12 @@
       В моем блоге освещаются следующие темы: пошло облако тегов
   .row
     .span4
-      %h2
-        Новые записи:
+      %h2 Новые записи:
       %ul
         - @last_posts.each do |post|
-          %li= post.title
+          %li
+            %h3= link_to post.title, post_path(post)
+            = post.tag_list.join ' '
       = link_to t('posts.all'), posts_path, :class => "btn btn-primary"
     .span4
       %h2 Новые комментарии:
