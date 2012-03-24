@@ -8,7 +8,14 @@ class Post < ActiveRecord::Base
 
   private
   def parse_hash_tags
-    self.tag_list.clear
-    self.tag_list = extract_hashtags(body)
+    tag_list.clear
+
+    extend PostHelper
+    html = markdown body
+    doc = Hpricot html
+    paragraphs = doc.search("//p").join
+    
+    tags = extract_hashtags paragraphs
+    tag_list.add tags
   end
 end

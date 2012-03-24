@@ -18,6 +18,7 @@ gem "breadcrumbs_on_rails"
 gem 'russian'
 
 gem 'redcarpet'
+gem 'hpricot'
 gem 'twitter-text'
 
 # Gems used only for assets and not required
