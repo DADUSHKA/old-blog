@@ -16,10 +16,8 @@ Blog::Application.routes.draw do
   end
 
   resources :posts, :only => [:index, :show]
+  resources :tags, :only => [:index, :show]  
 
-  namespace :post do
-    resources :tags, :only => [:index, :show]  
-  end  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

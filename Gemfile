@@ -14,6 +14,7 @@ gem 'simple_form'
 gem 'inherited_resources'
 gem 'acts-as-taggable-on'
 gem 'friendly_id'
+gem "breadcrumbs_on_rails"
 gem 'russian'
 
 gem 'redcarpet'
