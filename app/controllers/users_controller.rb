@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def new
+    add_breadcrumb I18n.t('registration'), :new_user_path
     @user = User.new
   end
 
