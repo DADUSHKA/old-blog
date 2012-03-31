@@ -1,0 +1,5 @@
+= simple_form_for [:admin, @category] do |f|
+  = f.input :name
+  = f.input :parent_id, :collection => @categories
+  .form-actions
+    = f.button :submit, :class => 'btn-primary'

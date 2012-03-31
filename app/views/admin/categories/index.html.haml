@@ -1,0 +1,19 @@
+= link_to 'New', new_admin_category_path
+%table.table
+  %thead
+    %tr
+      %th Id
+      %th Name
+      %th Depth
+      %th Created at
+      %th Actions
+  %tbody
+    - @categories.each do |c|
+      %tr
+        %th= c.id
+        %th= link_to c.name, admin_category_path(c)
+        %th= c.depth
+        %th= l c.created_at, :format => :short
+        %th
+          = link_to t('views.defaults.edit'), edit_admin_category_path(c), :class => "btn btn-primary"
+          = link_to t('views.defaults.delete'), admin_category_path(c),  :method => :delete, :confirm => "Are you sure?", :class => "btn btn-danger"

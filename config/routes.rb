@@ -5,6 +5,7 @@ Blog::Application.routes.draw do
     root :to => 'posts#index'
     resources :posts
     resources :users
+    resources :categories
   end
 
   resource :user, :only => [:new, :create] do
@@ -17,7 +18,7 @@ Blog::Application.routes.draw do
 
   resources :posts, :only => [:index, :show]
   resources :tags, :only => [:index, :show]  
-
+  resources :categories, :only => [:index, :show]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
