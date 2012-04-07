@@ -1,5 +1,6 @@
 = simple_form_for [:admin, @post] do |f|
   = f.input :title
   = f.input :body
+  = f.select :state, @post.state_transitions.map { |s| s.to }, :include_blank => @post.human_state_name
   .form-actions
     = f.button :submit, :class => 'btn-primary'

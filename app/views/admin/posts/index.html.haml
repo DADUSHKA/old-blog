@@ -4,6 +4,7 @@
     %tr
       %th Id
       %th Title
+      %th State
       %th Created at
       %th Actions
   %tbody
@@ -11,7 +12,9 @@
       %tr
         %th= post.id
         %th= link_to post.title, post
+        %th= post.state
         %th= l post.created_at, :format => :short
         %th
           = link_to t('views.defaults.edit'), edit_admin_post_path(post), :class => "btn btn-primary"
           = link_to t('views.defaults.delete'), admin_post_path(post),  :method => :delete, :confirm => "Are you sure?", :class => "btn btn-danger"
+          

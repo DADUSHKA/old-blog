@@ -3,10 +3,24 @@ class Post < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
+  acts_as_taggable
+
+  before_save :parse_hash_tags
+
   belongs_to :category
 
-  acts_as_taggable
-  before_save :parse_hash_tags
+  state_machine :initial => :not_published do
+    state :published
+    state :not_published
+
+    event :publish do
+      transition :not_published => :published
+    end
+
+    event :remove_from_publication do
+      transition :published => :not_published
+    end
+  end
 
   private
   def parse_hash_tags
