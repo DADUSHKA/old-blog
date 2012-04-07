@@ -1,0 +1,12 @@
+!!!
+%html
+  = render 'layouts/head'
+  %body
+    = render 'layouts/nav'
+    .container
+      = render :partial => 'layouts/flash', :object => flash
+      = render_breadcrumbs :builder => ::BootstrapBreadcrumbsBuilder
+      .row
+        .span12
+          = yield
+    %footer.container
