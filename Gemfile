@@ -15,6 +15,7 @@ gem 'inherited_resources'
 gem 'acts-as-taggable-on'
 gem 'friendly_id'
 gem "breadcrumbs_on_rails"
+gem 'ancestry'
 gem 'russian'
 
 gem 'redcarpet'

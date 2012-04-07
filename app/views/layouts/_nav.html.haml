@@ -5,7 +5,7 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.brand{:href => "#"} 
+      %a.brand{:href => "/"} 
         Darkleaf
       .nav-collapse
         %ul.nav
@@ -23,6 +23,7 @@
               %ul.dropdown-menu
                 %li= link_to 'Posts', admin_posts_path
                 %li= link_to 'Users', admin_users_path
+                %li= link_to 'Categories', admin_categories_path
         %ul.nav.pull-right
           - if signed_in? then
             %li= link_to "Выйти", user_session_path, :method => :delete

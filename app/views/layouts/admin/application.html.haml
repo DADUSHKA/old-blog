@@ -7,11 +7,6 @@
       = render :partial => 'layouts/flash', :object => flash
       = render_breadcrumbs :builder => ::BootstrapBreadcrumbsBuilder
       .row
-        .span3
-          .well
-            = display_tree(Category.roots, :ul => {:class => 'nav nav-list'}){|c| link_to c.name, category_path(c)}
-        .span9
+        .span12
           = yield
     %footer.container
-
-    
